@@ -1,10 +1,10 @@
 import Footer from "./Footer";
 import WelcomeLabel from "./WelcomeLabel";
-import DetailsForm from "./LoginDetailsForm";
+import DetailsForm from "./SignUpDetailsForm";
 
-const Home = () => { 
+const SignUp = () => { 
    return ( 
-      <div className="home-page ">
+      <div className="home-page">
          <WelcomeLabel />
          <DetailsForm />
          <Footer />
@@ -12,4 +12,4 @@ const Home = () => {
    );
 }
  
-export default Home;
+export default SignUp;

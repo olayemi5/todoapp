@@ -1,10 +1,10 @@
 import { Container, Row, Col } from "react-bootstrap";
 import NavBar from "./NavBar";
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faBookOpen } from '@fortawesome/free-solid-svg-icons'
-import { faCheckCircle } from '@fortawesome/free-solid-svg-icons'
+import { faBookOpen, faCheckCircle } from '@fortawesome/free-solid-svg-icons'
+import { faGithub, faLinkedin, faMedium } from '@fortawesome/free-brands-svg-icons'
 
-const Home = () => {
+const Home = () => { 
 
    const handleSubmit = (e) => {
       e.preventDefault();
@@ -17,7 +17,7 @@ const Home = () => {
                <Container>
                   <Row className="justify-content-center ">
                      <Col md={5}>
-                           <p className="content"><FontAwesomeIcon size="3x" className='home-icon' style={{fontize:'30px'}} icon={faBookOpen} /> <span className='content-bold'>Welcome! </span> TO STEVE MINI SOCIETY BLOG</p>
+                           <p className="contenty"><FontAwesomeIcon size="3x" className='home-icon' style={{fontize:'30px'}} icon={faBookOpen} /> <span className='content-bold'>Welcome! </span> TO STEVE MINI SOCIETY BLOG</p>
                      </Col>
                   </Row>
                </Container>
@@ -52,9 +52,20 @@ const Home = () => {
            </div>
            <div className="home-content3">
                <Container>
-                  <Row className="justify-content-center ">
+                  <Row className="justify-content-center">
                      <Col md={5}>
-                       
+                        <p>&copy; Stephen Olayemi | 2021 | Homepage | SocioMini Web Union Reserve</p>
+                        <Row className="justify-content-center">
+                           <Col xs={3} md={3}>
+                              <a className="anchor" href="https://www.linkedin.com/in/stephen-nixon-8b1a80198/"><FontAwesomeIcon size="2x" icon={faLinkedin}/> </a>
+                           </Col>
+                           <Col xs={3} md={3}>
+                              <a className="anchor" href="https://github.com/Olayemi5"><FontAwesomeIcon size="2x" icon={faGithub}/> </a>
+                           </Col>
+                           <Col xs={3} md={3}>
+                              <a className="anchor" href="https://medium.com/@olayemisn013"><FontAwesomeIcon size="2x" icon={faMedium}/> </a>
+                           </Col>
+                        </Row>
                      </Col>
                   </Row>
                </Container>

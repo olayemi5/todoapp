@@ -31,13 +31,17 @@ button:focus {
   color: #f1356d;
   font-weight: bold;
 }
+.contenty {
+  margin-top: 50px;
+}
 .home-icon {
   margin-right: 15px;
   color: #f1356d;
 }
 .home-content1 {
   background-color: whitesmoke;
-  padding: 50px;
+  padding-top: 100px;
+  height: 300px;
   border-bottom: 10px solid rgb(245, 245, 245);
   border-bottom: 10px solid rgba(245, 245, 245, 0.01);
 }
@@ -46,6 +50,11 @@ button:focus {
   height: 430px;
   border-top: 100px solid rgb(245, 245, 245);
   border-top: 100px solid rgba(245, 245, 245, 0.01);
+}
+.home-content3 {
+  background: #b50036;
+  padding: 65px;
+  color: whitesmoke;
 }
 .form-group {
   margin-top: 20px;
@@ -67,4 +76,10 @@ button:focus {
 .bltn:hover {
   background-color: #fff;
   color: #f1356d;
+}
+.anchor {
+  color: whitesmoke;
+}
+.anchor:hover {
+  color: gray;
 }

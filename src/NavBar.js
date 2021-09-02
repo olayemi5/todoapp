@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom';
 
 const NavBar = () => {
     return ( 
-        <Navbar bg="light" expand="lg">
+        <Navbar bg="light" expand="lg" fixed="top">
             <Container>
                 <Navbar.Brand  href="/"><b className="nav-brand">SYPGengs</b></Navbar.Brand>
                 <Navbar.Toggle />

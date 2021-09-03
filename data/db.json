@@ -29,28 +29,16 @@
       "id": 2
     },
     {
-      "title": "Becoming a successful Developer",
-      "body": "Can you please tell me who composed the descant for this song and where I can find a printed version of it?",
-      "author": "Stephen",
-      "id": 10
-    },
-    {
-      "title": "Reaching for the stars",
-      "body": "Can you please tell me who composed the descant for this song and where I can find a printed version of it?",
-      "author": "Stephen",
-      "id": 10
-    },
-    {
-      "title": "Grit, Resilience, Agility",
-      "body": "Can you please tell me who composed the descant for this song and where I can find a printed version of it?",
-      "author": "Stephen",
-      "id": 10
-    },
-    {
       "title": "Shell Basics in C",
       "body": "Before we dive a little deep into shell and shell scripting let know what Linux is and why it been used.\n\nLinux is a Unix-like, open source and community-developed operating system for computers, servers, mainframes, mobile devices and embedded devices. It is supported on almost every major computer platform including x86, ARM and SPARC, making it one of the most widely supported operating systems.\n\nADVANTAGE OF LINUX OVER OTHER OPERATING SYSTEM\n\nLet check a little about 5 advantages of Linux\n\n    Linux facilitates with powerful support for networking. The client-server systems can be easily set to a Linux system. It provides various command-line tools such as ssh, ip, mail, telnet, and more for connectivity with the other systems and servers. Tasks such as network backup are much faster than others.\n    Linux is more stable than other operating systems. Linux does not require to reboot the system to maintain performance levels. It rarely hangs up or slow down. It has big up-times.\n    Linux operating system is very flexible. It can be used for desktop applications, embedded systems, and server applications too. It also provides various restriction options for specific computers. We can install only necessary components for a system.",
       "author": "Stephen Olayemi",
-      "id": 11
+      "id": 4
+    },
+    {
+      "title": "Pains of Lies",
+      "body": "t is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English. Many desktop publishing packages and web page editors now use Lorem Ipsum as their default model text, and a search for 'lorem ipsum' will uncover many web sites still in their infancy. Various versions have evolved over the years, sometimes by accident, sometimes on purpose (injected humour and the like).",
+      "author": "Stephen Olayemi",
+      "id": 5
     }
   ]
 }

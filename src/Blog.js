@@ -1,6 +1,7 @@
 import { faPlusCircle, faSearch } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { Col, Container, Row } from "react-bootstrap";
+import { useState } from "react";
 import { Link } from "react-router-dom";
 import personlaImage  from './Assets/self.jpeg';
 import BlogList from './BlogList';
@@ -11,6 +12,18 @@ import CarouselDisplay from "./Carousel";
 const Blog = () => {
 
      const {data, IsPending, erroMsg} = useFetch('http://localhost:8003/blogs');
+     const [searchValue, setSearchValue] = useState('');
+      const [searhcValueNotFound, setSearchValueNotF0und] = useState('');
+     const [reseverObject, setReservedObject] = useState(null);
+     const handleSearch = () => {
+         const filteredBlogs = data.filter( (e) => e.title === searchValue );
+         setReservedObject(filteredBlogs);
+         if(filteredBlogs.length === 0)
+         {
+             setSearchValueNotF0und(`Search value - ${searchValue} not found`);
+         }
+         setSearchValue('');
+     }
 
     return ( 
         <div className="blog-page">
@@ -40,9 +53,13 @@ const Blog = () => {
             <div className="blog-starter">
                 <Container>
                     <Row>
-                        <Col md={5}>
+                        <Col md={5} >
                             {IsPending && <p>Loading blogs please wait a while...</p>}
-                            { data && <BlogList blogs={ data } title= "All blogs" />} 
+                            <div className="mb-4">
+                                 { reseverObject && <BlogList className="mt-4" blogs={ reseverObject } title= "Filtered Blog" /> }
+                                 { searhcValueNotFound && <div> { searhcValueNotFound }</div> }
+                            </div>
+                            { data && <BlogList className="mt-4" blogs={ data } title= "All blogs" />} 
                             { erroMsg && <p style={{ 
                                 color:'red'
                                 }}> { erroMsg }</p>}
@@ -51,11 +68,11 @@ const Blog = () => {
                         </Col>
                         <Col md={5}>
                             <Row>
-                                <Col md={1}>
-                                    <p style={{marginTop:'12px'}}><FontAwesomeIcon icon={faSearch}/></p>
+                                <Col md={10}>
+                                    <input value={ searchValue } onChange={(e) => setSearchValue(e.target.value)} placeholder="Search Blog" type="search" style={{border:'0'}} className="fcnt"/>
                                 </Col>
-                                <Col md={11}>
-                                    <input placeholder="Search Blog" type="search" style={{border:'0'}} className="fcnt"/>
+                                <Col md={2}>
+                                    <button onClick={ handleSearch } className="bltn-p"><FontAwesomeIcon icon={faSearch}/> Serach</button>
                                 </Col>
                             </Row>
                             <div className="text-center ">

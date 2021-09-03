@@ -71,6 +71,7 @@ button:focus {
 .home-content3 {
   background: #b50036;
   padding: 65px;
+
   color: whitesmoke;
 }
 
@@ -104,12 +105,18 @@ button:focus {
   background-color: #f0f0f0;
   padding: 30px;
   color: gray;
+  height: 700px;
+  max-height: 700px;
+  overflow-y: scroll;
   border-top: 100px solid rgb(245, 245, 245);
   border-top: 100px solid rgba(245, 245, 245, 0.01);
 }
 
 .form-group {
   margin-top: 20px;
+}
+.default-gray {
+  color: #4f494a;
 }
 
 .default {
@@ -162,6 +169,16 @@ button:focus {
   color: #f1356d;
   box-shadow: 5px 5px 5px rgba(61, 61, 61, 0.53);
 }
+.bltn-inherit {
+  background: white;
+  color: #4f494a;
+  padding: 8px;
+  border: 0;
+  border-radius: 8px;
+  width: 100px;
+  box-shadow: 3px 3px 3px rgba(61, 61, 61, 0.23) inset;
+}
+
 .anchor {
   color: whitesmoke;
 }

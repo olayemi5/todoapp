@@ -7,6 +7,7 @@ const useFetch = (url) => {
     const [erroMsg, setErrorMsg] = useState(null);
     
         useEffect(() => {
+            
             const abortCont = new AbortController();
 
             setTimeout(() => {

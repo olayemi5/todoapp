@@ -17,23 +17,22 @@ const CreateBlog = () => {
     const handleSubmit = (e) => {
         e.preventDefault();
         const blog = {title,body,author};
-      setTimeout(() => {
-         setPending(true);
+        setTimeout(() => {
+            setPending(true);
 
-         fetch('http://localhost:8003/blogs', {
-         method:'POST',
-         headers: { "Content-Type": "application/json" },
-         body:JSON.stringify(blog)
-         }).then(() => { 
-               setPending(false);
-               history.push(`/blogs`);
-         }).catch(error => 
-               {
-                  setPending(false);
-                  setErrorMsg(error.message);
-               })
-      },200)
-
+            fetch('http://localhost:8003/blogs', {
+            method:'POST',
+            headers: { "Content-Type": "application/json" },
+            body:JSON.stringify(blog)
+            }).then(() => { 
+                setPending(false);
+                history.push(`/blogs`);
+            }).catch(error => 
+                {
+                    setPending(false);
+                    setErrorMsg(error.message);
+                })
+        },200)
     }
 
     return ( 

@@ -30,6 +30,7 @@ button:focus {
 .fcnt {
   width: 100%;
   padding: 10px;
+  border: 0;
   border-radius: 10px;
 }
 .nav-brand {
@@ -79,8 +80,32 @@ button:focus {
   border-top: 100px solid rgb(245, 245, 245);
   border-top: 100px solid rgba(245, 245, 245, 0.01);
 }
+.home-content5 {
+  background-color: whitesmoke;
+  color: #ff789b;
+  padding-top: 100px;
+  padding-left: 30px;
+  border-bottom: 10px solid rgb(245, 245, 245);
+  border-bottom: 10px solid rgba(245, 245, 245, 0.01);
+}
+.home-content5 p {
+  color: #4f494a;
+}
+
+.home-content6 {
+  background-color: #f0f0f0;
+  padding-bottom: 30px;
+  color: gray;
+  border-top: 100px solid rgb(245, 245, 245);
+  border-top: 100px solid rgba(245, 245, 245, 0.01);
+}
+
 .form-group {
   margin-top: 20px;
+}
+
+.default {
+  color: #ff789b;
 }
 
 .titleLabels {
@@ -114,6 +139,21 @@ button:focus {
   background-color: #fff;
   color: #f1356d;
 }
+.bltn-p {
+  background: white;
+  color: #4f494a;
+  border: 0;
+  width: 100px;
+  padding: 8px;
+  border-radius: 2px;
+  cursor: pointer;
+  box-shadow: 3px 3px 3px rgba(61, 61, 61, 0.53);
+}
+
+.bltn-p:hover {
+  color: #f1356d;
+  box-shadow: 5px 5px 5px rgba(61, 61, 61, 0.53);
+}
 .anchor {
   color: whitesmoke;
 }
@@ -124,7 +164,6 @@ button:focus {
 .blog-header {
   background-color: whitesmoke;
   padding-top: 100px;
-  height: 500px;
   border-bottom: 10px solid rgb(245, 245, 245);
   border-bottom: 10px solid rgba(245, 245, 245, 0.01);
 }

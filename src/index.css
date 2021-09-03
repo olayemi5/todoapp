@@ -6,6 +6,21 @@
   font-family: "Quicksand";
   outline: none;
 }
+
+::-webkit-scrollbar {
+  width: 12px;
+}
+
+::-webkit-scrollbar-track {
+  box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+  border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb {
+  border-radius: 10px;
+  box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.5);
+}
+
 input:focus,
 select:focus,
 textarea:focus,
@@ -116,7 +131,7 @@ button:focus {
 .blog-starter {
   padding: 60px;
   background-color: #fff7f9;
-  max-height: 1000px;
+  max-height: 700px;
   overflow-y: scroll;
 }
 .blog-starter a {

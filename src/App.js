@@ -3,6 +3,7 @@ import {  BrowserRouter as Router, Route, Switch } from 'react-router-dom';
 import NavBar from "./NavBar";
 import SignUp from "./SignUp";
 import Blog from "./Blog";
+import CreateBlog from "./CreateBlog";
 
 function App() {
   return (
@@ -25,6 +26,9 @@ function App() {
                     </Route>
                     <Route path='/signup'>
                         <SignUp />
+                    </Route>
+                    <Route path='/createblog'>
+                        <CreateBlog />
                     </Route>
                     <Route path='*'>
                         

@@ -1,6 +1,7 @@
 import { faPlusCircle, faSearch } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { Col, Container, Row , Carousel} from "react-bootstrap";
+import { Link } from "react-router-dom";
 import personlaImage  from './Assets/self.jpeg';
 import coureselImageOne  from './Assets/microsoft.jpg';
 import coureselImageTwo  from './Assets/google.webp';
@@ -61,7 +62,7 @@ const Blog = () => {
                             </Row>
                             <div className="text-center ">
                                 <p className="mt-3">Do you also want to create a blog, or you want to share some experience fact with others? click the plus sign below</p>
-                                <FontAwesomeIcon className="create-blog" size="3x" icon={faPlusCircle}/>
+                                <Link to="/createblog"><FontAwesomeIcon className="create-blog" size="3x" icon={faPlusCircle}/></Link>
                             </div>
                             <div className="mt-3">
                                 <Carousel>

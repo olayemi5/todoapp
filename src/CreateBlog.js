@@ -3,12 +3,38 @@ import { useState } from "react";
 import Footer from "./Footer";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faUpload } from "@fortawesome/free-solid-svg-icons";
+import {useHistory } from "react-router-dom";
 
 const CreateBlog = () => {
 
     const [title, setTitle] = useState();
     const [body, setBody] = useState();
     const [author, setAuthor] = useState();
+    const [error, setErrorMsg]  = useState(null);
+    const [IsPending, setPending] = useState();
+    const history = useHistory();
+
+    const handleSubmit = (e) => {
+        e.preventDefault();
+        const blog = {title,body,author};
+      setTimeout(() => {
+         setPending(true);
+
+         fetch('http://localhost:8003/blogs', {
+         method:'POST',
+         headers: { "Content-Type": "application/json" },
+         body:JSON.stringify(blog)
+         }).then(() => { 
+               setPending(false);
+               history.push(`/blogs`);
+         }).catch(error => 
+               {
+                  setPending(false);
+                  setErrorMsg(error.message);
+               })
+      },200)
+
+    }
 
     return ( 
         <div className="create-blog">
@@ -22,7 +48,8 @@ const CreateBlog = () => {
                 <Container>
                     <Row>
                         <Col md={6} >
-                            <form>
+                            <form onSubmit={ handleSubmit }>
+                                { error && <p className="m-3">{ error }</p> }
                                 <h2>Put Blog Details Below</h2>
                                 <div className="form-group">
                                     <label className="titleLabels default">Title</label>
@@ -49,7 +76,8 @@ const CreateBlog = () => {
                                            onChange={ (e) => setAuthor(e.target.value) }></input>
                                 </div>
                                 <div className="form-group mb-5">
-                                    <button style={{float:'right'}} className="bltn-p"><FontAwesomeIcon icon={faUpload}/> Publish</button>
+                                    { !IsPending && <button style={{float:'right'}} className="bltn-p"><FontAwesomeIcon icon={faUpload}/> Publish</button> }
+                                    { IsPending && <button disabled="true" style={{float:'right'}} className="bltn-p"><FontAwesomeIcon icon={faUpload}/> Publish in progress...</button> }
                                 </div>
                             </form>
                         </Col>

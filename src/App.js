@@ -4,6 +4,7 @@ import NavBar from "./NavBar";
 import SignUp from "./SignUp";
 import Blog from "./Blog";
 import CreateBlog from "./CreateBlog";
+import BlogDetails from "./BlogDetails";
 
 function App() {
   return (
@@ -15,7 +16,7 @@ function App() {
                     <Route exact path='/'>
                         <Home />
                     </Route>
-                    <Route path='/blogs'>
+                    <Route exact path='/blogs'>
                         <Blog />
                     </Route>
                     <Route path='/todo'>
@@ -29,6 +30,9 @@ function App() {
                     </Route>
                     <Route path='/createblog'>
                         <CreateBlog />
+                    </Route>
+                    <Route path='/blogs/:id'>
+                        <BlogDetails />
                     </Route>
                     <Route path='*'>
                         

@@ -18,7 +18,6 @@ const SignUpDetailsForm = () => {
 
    const handleSubmit = (e) => {
       e.preventDefault();
-      console.log('response not ignored!');
       const user = {username,password,email,referral};
       setTimeout(() => {
          setPending(true);

@@ -76,7 +76,7 @@ button:focus {
 
 .home-content4 {
   background-color: #f0f0f0;
-  height: 640px;
+  padding-bottom: 50px;
   border-top: 100px solid rgb(245, 245, 245);
   border-top: 100px solid rgba(245, 245, 245, 0.01);
 }
@@ -95,6 +95,14 @@ button:focus {
 .home-content6 {
   background-color: #f0f0f0;
   padding-bottom: 30px;
+  color: gray;
+  border-top: 100px solid rgb(245, 245, 245);
+  border-top: 100px solid rgba(245, 245, 245, 0.01);
+}
+
+.home-content7 {
+  background-color: #f0f0f0;
+  padding: 30px;
   color: gray;
   border-top: 100px solid rgb(245, 245, 245);
   border-top: 100px solid rgba(245, 245, 245, 0.01);
@@ -169,7 +177,7 @@ button:focus {
 }
 .blog-starter {
   padding: 60px;
-  background-color: #fff7f9;
+  background-color: #f0f0f0;
   max-height: 700px;
   overflow-y: scroll;
 }

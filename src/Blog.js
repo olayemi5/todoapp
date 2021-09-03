@@ -1,14 +1,12 @@
 import { faPlusCircle, faSearch } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { Col, Container, Row , Carousel} from "react-bootstrap";
+import { Col, Container, Row } from "react-bootstrap";
 import { Link } from "react-router-dom";
 import personlaImage  from './Assets/self.jpeg';
-import coureselImageOne  from './Assets/microsoft.jpg';
-import coureselImageTwo  from './Assets/google.webp';
-import coureselImageThree  from './Assets/netflix.png';
 import BlogList from './BlogList';
 import useFetch from './useFetch';
 import Footer, {  } from "./Footer"
+import CarouselDisplay from "./Carousel";
 
 const Blog = () => {
 
@@ -65,41 +63,7 @@ const Blog = () => {
                                 <Link to="/createblog"><FontAwesomeIcon className="create-blog" size="3x" icon={faPlusCircle}/></Link>
                             </div>
                             <div className="mt-3">
-                                <Carousel>
-                                    <Carousel.Item interval={1000}>
-                                        <img
-                                        className="d-block w-100"
-                                        src={ coureselImageOne }
-                                        alt="First slide"
-                                        />
-                                        <Carousel.Caption>
-                                        <h3>First slide label</h3>
-                                        <p>Nulla vitae elit libero, a pharetra augue mollis interdum.</p>
-                                        </Carousel.Caption>
-                                    </Carousel.Item>
-                                    <Carousel.Item interval={500}>
-                                        <img
-                                        className="d-block w-100"
-                                        src={ coureselImageTwo }
-                                        alt="Second slide"
-                                        />
-                                        <Carousel.Caption>
-                                        <h3>Second slide label</h3>
-                                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-                                        </Carousel.Caption>
-                                    </Carousel.Item>
-                                    <Carousel.Item>
-                                        <img
-                                        className="d-block w-100"
-                                        src={ coureselImageThree }
-                                        alt="Third slide"
-                                        />
-                                        <Carousel.Caption>
-                                        <h3>Third slide label</h3>
-                                        <p>Praesent commodo cursus magna, vel scelerisque nisl consectetur.</p>
-                                        </Carousel.Caption>
-                                    </Carousel.Item>
-                                </Carousel>
+                                <CarouselDisplay />
                             </div>
                         </Col>
                     </Row>

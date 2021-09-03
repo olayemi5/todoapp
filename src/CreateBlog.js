@@ -1,6 +1,8 @@
 import { Col, Container, Row } from "react-bootstrap"
 import { useState } from "react";
 import Footer from "./Footer";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faUpload } from "@fortawesome/free-solid-svg-icons";
 
 const CreateBlog = () => {
 
@@ -47,7 +49,7 @@ const CreateBlog = () => {
                                            onChange={ (e) => setAuthor(e.target.value) }></input>
                                 </div>
                                 <div className="form-group mb-5">
-                                    <button style={{float:'right'}} className="bltn-p">Publish</button>
+                                    <button style={{float:'right'}} className="bltn-p"><FontAwesomeIcon icon={faUpload}/> Publish</button>
                                 </div>
                             </form>
                         </Col>
